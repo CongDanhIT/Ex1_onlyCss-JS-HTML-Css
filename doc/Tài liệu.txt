@@ -1,0 +1,247 @@
+Pharse 1: cài đặt chung cho h1 -> h6, sử dụng rem cho thiết kế đáp ứng sau này.
+
+*********************************
+html{
+    height: 100%;
+    font-size: 16px;
+}
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif, 'MyFont', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: calc(50rem/16);
+  line-height: 1.5;
+  font-weight:  bold;
+}
+
+h2 {
+    font-size: calc(46rem/16);
+    line-height: 1.5;
+    font-weight:  bold;
+  }
+h3 {
+    font-size: calc(30rem/16);
+    line-height: 1.5;
+    font-weight:  bold;
+  }
+
+h4 {
+    font-size: calc(20rem/16);
+    line-height: 1.5;
+    font-weight:  700;
+  }
+h5 {
+    font-size: calc(18rem/16);
+    line-height: 1.5;
+    font-weight:  700;
+  }
+h6 {
+    font-size: calc(12rem/16);
+    line-height: 1.5;
+    font-weight: 700;
+  }
+p {
+    font-size: calc(16rem/16);
+    line-height: 1.5;
+    font-weight:  400;
+  }
+******************************************
+Pharse 2: phân chia mục CSS
+****************************************
+/css
+│
+├── /base
+│   ├── _reset.css        /* Reset các kiểu mặc định của trình duyệt */
+│   ├── _typography.css   /* Kiểu chữ (font-size, font-family, line-height, etc.) */
+│   └── _variables.css    /* Các biến màu sắc, font-size, spacing, v.v. */
+│   └─  _base.css
+├── /layout
+│   ├── _grid.css         /* Các kiểu cho grid layout (nếu có) */
+│   ├── _header.css       /* Kiểu cho header */
+│   ├── _footer.css       /* Kiểu cho footer */
+│   └── _sidebar.css      /* Kiểu cho sidebar (nếu có) */
+│
+├── /components
+│   ├── _buttons.css      /* Kiểu cho các nút bấm */
+│   ├── _cards.css        /* Kiểu cho các card (nếu có) */
+│   ├── _forms.css        /* Kiểu cho các form */
+│   └── _modals.css       /* Kiểu cho các modal */
+│
+├── /pages
+│   ├── _home.css         /* Các kiểu đặc thù cho trang chủ */
+│   ├── _about.css        /* Các kiểu cho trang giới thiệu */
+│   └── _contact.css      /* Các kiểu cho trang liên hệ */
+│
+├── /themes
+│   ├── _light-theme.css  /* Kiểu cho chủ đề sáng */
+│   └── _dark-theme.css   /* Kiểu cho chủ đề tối */
+│
+├── /utils
+│   ├── _helpers.css      /* Các helper classes (text-center, margin-auto, etc.) */
+│   └── _animations.css   /* Các kiểu animation */
+│
+└── main.css              /* File chính, sẽ import tất cả các file ở trên */
+
+
+-----------------------------------------------------------------
+Cách tổ chức với SASS (nếu bạn dùng SASS):
+Nếu bạn dùng SASS, bạn có thể tận dụng tính năng @import hoặc @use để gộp tất cả các file lại với nhau mà không cần phải load từng file CSS riêng biệt. Ví dụ:
+
+
+/* main.scss */
+@use 'base/variables';
+@use 'base/typography';
+@use 'base/reset';
+@use 'layout/grid';
+@use 'layout/header';
+@use 'components/buttons';
+@use 'components/forms';
+@use 'pages/home';
+@use 'themes/light-theme';
+
+/* Các CSS khác */
+/* Import các file CSS nhỏ */
+@import url('base/reset.css');
+@import url('base/variables.css');
+@import url('base/typography.css');
+@import url('layout/grid.css');
+@import url('layout/header.css');
+@import url('layout/footer.css');
+@import url('components/buttons.css');
+@import url('components/forms.css');
+@import url('pages/home.css');
+@import url('themes/light-theme.css');
+@import url('utils/helpers.css');
+@import url('utils/animations.css');
+// dùng nếu không xài SASS
+------------------------------------------------
+Cấu trúc thư mục và phân chia HTML tối ưu:
+/html
+│
+├── /partials
+│   ├── header.html     /* Phần header của trang */
+│   ├── footer.html     /* Phần footer của trang */
+│   └── sidebar.html    /* Phần sidebar (nếu có) */
+│
+├── /pages
+│   ├── index.html      /* Trang chủ */
+│   ├── about.html      /* Trang giới thiệu */
+│   └── contact.html    /* Trang liên hệ */
+│
+├── /components
+│   ├── buttons.html    /* Các thành phần tái sử dụng như button */
+│   ├── cards.html      /* Các thành phần card */
+│   ├── modals.html     /* Các phần tử modal */
+│   └── forms.html      /* Các phần tử form */
+│
+└── index.html          /* File chính, chứa tất cả các phần tử của trang */
+******************************************************************************************************************
+
+Pharse 3: Cách ứng dụng cấu trúc thư mục của HTML để dễ tái sử dụng
+Tóm gọn cho dễ hiểu nè bạn! Nếu bạn muốn:
+
+✅ **Tách file HTML ra rõ ràng theo thư mục như `/partials`, `/components`, `/pages`, v.v.**  
+✅ **Tái sử dụng header, footer, form... mà không phải copy-paste**  
+✅ **Chạy được trên trình duyệt** (dễ test, không cần cài đặt rườm rà)
+
+---
+
+## 🎯 Thì bạn nên dùng 1 trong 3 **cách phổ biến sau**:
+
+---
+
+### 🔹 **Cách 1: Dùng JavaScript (với fetch)** – Dễ làm, không cần Node.js
+
+> ✅ Phù hợp nếu bạn chỉ cần làm frontend đơn giản, dễ test với Live Server.
+
+**Cách làm**: Dùng `fetch()` để **load file HTML vào trang chính**.
+
+#### 🔧 Ví dụ:
+
+**📁 /html/pages/index.html**
+```html
+<body>
+  <div id="header"></div>
+
+  <main>
+    <h1>Trang chủ</h1>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    const load = async (el, path) => {
+      const res = await fetch(path);
+      const html = await res.text();
+      document.querySelector(el).innerHTML = html;
+    };
+    load("#header", "../partials/header.html");
+    load("#footer", "../partials/footer.html");
+  </script>
+</body>
+```
+
+**📁 /html/partials/header.html**
+```html
+<header>
+  <h2>Đây là header</h2>
+</header>
+```
+
+> 🔸 **Yêu cầu**: dùng Live Server hoặc chạy trên môi trường có HTTP (không mở bằng `file://`)
+
+---
+
+### 🔹 **Cách 2: Dùng Template Engine (phải cài Node.js)**
+
+> ✅ Phù hợp nếu bạn làm **dự án lớn hơn** hoặc cần backend xử lý logic.
+
+**Các công nghệ dùng**:
+- EJS (Embedded JS)  
+- Handlebars  
+- Pug
+
+**Ví dụ (với EJS):**
+```ejs
+<!-- index.ejs -->
+<%- include('partials/header') %>
+<h1>Trang chủ</h1>
+<%- include('partials/footer') %>
+```
+
+> 🔸 Phải dùng Node.js và Express để render.
+
+---
+
+### 🔹 **Cách 3: Dùng Web Framework hoặc Build Tool (Next.js, Vite, Astro, v.v.)**
+
+> ✅ Phù hợp nếu bạn làm web chuyên nghiệp, có build hệ thống, tái sử dụng component hiện đại.
+
+Các lựa chọn:
+- [Astro](https://astro.build/) (siêu nhẹ, HTML-first)
+- [Vite + Pug plugin](https://vitejs.dev)
+- [Next.js](https://nextjs.org/) (nếu dùng React)
+
+---
+
+## ✅ Gợi ý cho bạn:
+
+| Mục tiêu                       | Công cụ nên dùng     |
+|-------------------------------|----------------------|
+| Chỉ làm HTML tĩnh dễ test     | Dùng **JS fetch()**  |
+| Làm web có server nhẹ         | Dùng **EJS + Node.js** |
+| Làm web hiện đại, mạnh mẽ     | Dùng **Astro hoặc Next.js** |
+
+---
+
+Nếu bạn muốn mình **làm mẫu 1 folder sẵn cho bạn tải về test thử cách JS fetch** hoặc cấu hình đơn giản cho Node.js + EJS, mình làm liền luôn nha 😄

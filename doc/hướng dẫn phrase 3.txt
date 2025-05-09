@@ -1,0 +1,89 @@
+Rồi nha, để mình giải thích **kỹ từng dòng** đoạn code HTML/JS này để bạn hiểu rõ **cách hoạt động của việc "chèn HTML từ file khác"** bằng JavaScript `fetch()`:
+
+---
+
+## ✨ Toàn bộ mục tiêu là:
+
+✔️ Không copy-paste lại `header` và `footer` trong từng trang  
+✔️ Mỗi trang chỉ cần `load()` file `header.html` và `footer.html` vào đúng chỗ  
+✔️ Gọn gàng, dễ quản lý
+
+---
+
+## 🔍 Phân tích chi tiết đoạn code:
+
+```html
+<body>
+  <div id="header"></div>  <!-- Nơi để nhúng nội dung header.html -->
+  
+  <main>
+    <h1>Trang chủ</h1>  <!-- Nội dung chính của trang -->
+  </main>
+
+  <div id="footer"></div>  <!-- Nơi để nhúng nội dung footer.html -->
+
+  <script>
+    const load = async (el, path) => {
+      const res = await fetch(path);                // Gửi request lấy nội dung từ file HTML (path)
+      const html = await res.text();                // Chuyển response thành text (chuỗi HTML)
+      document.querySelector(el).innerHTML = html;  // Chèn HTML đó vào phần tử được chỉ định (el)
+    };
+
+    load("#header", "../partials/header.html");  // Gọi hàm để chèn header
+    load("#footer", "../partials/footer.html");  // Gọi hàm để chèn footer
+  </script>
+</body>
+```
+
+---
+
+## 🧠 Từng phần hoạt động thế nào?
+
+| Dòng | Giải thích |
+|------|------------|
+| `<div id="header"></div>` | Đây là "vị trí placeholder" – chỗ mà bạn muốn phần `header.html` sẽ được hiển thị |
+| `<script>...</script>` | Đoạn script này chịu trách nhiệm tải file HTML bên ngoài và chèn vào DOM |
+| `fetch(path)` | Gửi yêu cầu HTTP tới file `header.html` hoặc `footer.html` (tức là bạn đang đọc file đó từ trình duyệt như khi gọi API) |
+| `.text()` | Lấy nội dung của file HTML dưới dạng text (chứ không phải file) |
+| `document.querySelector(el).innerHTML = html;` | Dán nội dung HTML vừa tải vào thẻ có id tương ứng |
+
+---
+
+## 📌 Điều kiện hoạt động:
+
+- ❗ **Không được mở trực tiếp bằng `file://`** (vì fetch sẽ bị chặn CORS)  
+- ✅ **Phải chạy qua local server** (VD: dùng [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) trong VS Code)
+
+---
+
+## 📂 Cấu trúc thư mục ví dụ:
+
+```
+project/
+│
+├── pages/
+│   └── index.html
+│
+└── partials/
+    ├── header.html
+    └── footer.html
+```
+
+Trong `index.html`, bạn dùng:
+```js
+load("#header", "../partials/header.html");
+```
+vì từ `pages/` đi ra ngoài 1 cấp (`../`) rồi vào thư mục `partials`.
+
+---
+
+## ✅ Lợi ích:
+
+- Chỉ sửa 1 file `header.html`, toàn bộ trang cập nhật
+- Dễ tổ chức, không bị trùng code
+- Không cần cài Node.js, phù hợp với project frontend
+
+---
+
+Nếu bạn cần mình **tạo sẵn một project mẫu .zip**, mình có thể gửi cho bạn test luôn nhé 😎  
+Bạn muốn mình làm luôn không?

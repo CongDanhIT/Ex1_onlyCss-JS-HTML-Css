@@ -1,0 +1,42 @@
+h1 {
+    font-size: calc(50rem/16);
+    line-height: 1.25;
+    font-weight:  bold;
+  }
+  
+  h2 {
+      font-size: calc(46rem/16);
+      line-height: 1.25;
+      font-weight:  bold;
+    }
+  h3 {
+      font-size: calc(30rem/16);
+      line-height: 1.25;
+      font-weight:  bold;
+    }
+  
+  h4 {
+      font-size: calc(20rem/16);
+      line-height: 1.25;
+      font-weight:  700;
+    }
+  h5 {
+      font-size: calc(18rem/16);
+      line-height: 1.25;
+      font-weight:  700;
+    }
+  h6 {
+      font-size: calc(12rem/16);
+      line-height: 1.25;
+      font-weight: 700;
+    }
+  p {
+      font-size: calc(16rem/16);
+      line-height: 1.25;
+      font-weight:  500;
+    }
+  span {
+      font-size: calc(16rem/16);
+      line-height: 1.25;
+      font-weight:  500;
+    }

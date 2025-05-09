@@ -1,0 +1,28 @@
+.card {
+    width: 23%;
+    min-width: 250px;
+    padding: 16px 28px;
+    box-sizing: border-box;
+    border: var(--border-style);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);  
+    transition: all 0.3s ease-in-out;
+}
+.card:hover img {
+    transform: scale(1.01);
+    box-shadow: var(--shadow-hover);
+}
+.card .des{
+    text-align: start;
+    padding: 10px;
+}
+    

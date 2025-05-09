@@ -1,0 +1,28 @@
+#hero {
+ 
+    background-image: url(../../img/hero.jpg);
+    height: 90vh;
+    width: 100%;
+    background-position: 75% center; /* người ở phía bên phải */
+    background-size: cover; /* Đảm bảo ảnh bao phủ toàn bộ khung hình */
+    padding: 0px 110px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+#hero h4 {
+
+}
+#hero p  {
+    margin-top: 16px;
+    opacity: 0.8;
+}
+#hero button:hover {
+   
+    color: var(--centolor-acc);
+    
+}
+#hero h1 {
+    color: var(--color-secondary);
+}

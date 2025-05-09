@@ -1,0 +1,15 @@
+html {
+    height: 100%;
+    font-size: var(--font-base);
+    overscroll-behavior: none; 
+    /* chặn bounce */
+   
+  }
+  body {
+    font-family: var(--font-family);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    width: 100%;
+    overscroll-behavior: none; /* chặn bounce */
+   
+  }

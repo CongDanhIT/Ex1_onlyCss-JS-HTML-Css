@@ -1,0 +1,69 @@
+:root {
+    /* ==== Font ==== */
+  --font-base: 16px; /* Kích thước font gốc */
+  --font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font chữ chính */
+  --font-secondary:  Georgia, 'Times New Roman', Times, serif;
+  /* ==== Màu sắc ==== */
+  --color-text: #333;       /* Màu chữ chính */
+  --color-bg: #f0fdff;      /* Màu nền chính */
+  --color-main: #80d9e1;      /* Màu chính */
+  --color-main-gradient: linear-gradient(to bottom, var(--color-main), #ffffff);
+  --color-sub:#ffe083; /* Màu phụ */
+  --centolor-acc: #ff6f61; /* Màu nhấn mạnh */
+  --color-secondary:  #004e57; /* Màu hover */
+  --color-caption: #b4b2b2;
+  --color-white: #fff; /* Màu trắng */
+  --color-black: #000; /* Màu đen */
+  /* ==== Shadow (Đổ bóng) ==== */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);          /* Bóng nhỏ – dùng cho nút hoặc thành phần nhỏ */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.15);         /* Bóng trung bình – dùng cho card hoặc hộp */
+  --shadow-md2: 0 0px 6px rgba(0, 0, 0, 0.15);       /* Bóng trung bình 2 tỏa đều – dùng cho card hoặc hộp */
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.2);        /* Bóng lớn – dùng cho modal hoặc container */
+
+  --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.06);/* Bóng vào trong – dùng cho input, button được nhấn */
+  --shadow-inset2: inset 0 2px 5px rgba(0, 0, 0, 0.2); /* bóng bên trong */
+
+  --shadow-header: 0 6px 20px rgba(0, 0, 0, 0.25); /* Bóng rộng và mờ – dùng cho header nổi */
+  --shadow-hover:0 6px 12px rgba(0, 0, 0, 0.15); /* Bóng khi hover – dùng cho các thành phần khi hover */
+  --shadow-soft-circle: 0 0 30px rgba(0, 0, 0, 0.1); /* Bóng tỏa tròn – dùng cho hiệu ứng nổi nhẹ */
+  --shadow-soft-drop: 0 8px 24px rgba(0, 0, 0, 0.15); /* Bóng tròn mềm lệch dưới – dùng cho card nổi */
+
+  --shadow-text-white: 0 0 10px rgba(255, 255, 255, 0.5); /* Bóng chữ trắng – dùng cho chữ nổi trên nền tối */
+   /* Bóng chữ đen nhẹ – chữ nổi trên nền sáng */
+   --shadow-text-black: 0 0 8px rgba(0, 0, 0, 0.4);
+   /* Bóng chữ đen đậm – cho chữ cần mạnh hơn */
+   --shadow-text-black-strong: 0 0 12px rgba(0, 0, 0, 0.7);
+   /* Bóng chữ màu (ví dụ xanh dương) – dùng cho chữ sặc sỡ */
+   --shadow-text-blue: 0 0 10px rgba(0, 162, 255, 0.6);
+   /* Bóng chữ vàng ấm – tạo cảm giác sáng bừng */
+   --shadow-text-gold: 0 0 8px rgba(255, 215, 0, 0.6);
+   /* Bóng chữ mềm mịn (blur nhiều) – hiệu ứng nhẹ như sương mù */
+   --shadow-text-soft: 0 0 20px rgba(255, 255, 255, 0.2); 
+   --text-shadow-stroke: 
+   -0.5px -0.5px 0 black,
+    0.5px -0.5px 0 black,
+   -0.5px  0.5px 0 black,
+    0.5px  0.5px 0 black;
+   /* Bóng chữ neon xanh lá – style cyberpunk */
+   --shadow-text-neon-green: 0 0 12px rgba(57, 255, 20, 0.8);
+   --shadow-text-reverse-white: 0 -4px 8px rgba(255, 255, 255, 0.5); /* bóng đổ ngước lên trắng */
+   --shadow-text-reverse-black: 0 -4px 8px rgba(0, 0, 0, 0.5); /* bóng đổ ngước lên đen */
+   --shadow-text-reverse-white1: 0 4px 8px rgba(255, 255, 255, 0.5); /* bóng đổ ngước xuống trắng */
+   --shadow-text-reverse-black1: 0 4px 8px rgba(0, 0, 0, 0.5); /* bóng đổ ngước xuống đen */
+   
+  
+  /* ==== Border Radius ==== */
+  --radius-sm: 4px;  /* Bo góc nhỏ */
+  --radius-md: 8px;  /* Bo góc trung bình */
+  --radius-lg: 16px; /* Bo góc lớn */
+
+  /* ==== Transition ==== */
+  --transition-fast: 0.2s ease-in-out;  /* Hiệu ứng chuyển nhanh */
+  --transition-slow: 0.4s ease-in-out;  /* Hiệu ứng chuyển chậm */
+  /* ==== Canh chỉnh ==== */
+  --PaMa--6_8: 60px 80px;
+  --PaMa--4_8: 40px 80px; /* Padding và Margin 40px 80px */
+  --PaMa--4_6: 40px 60px; /* Padding và Margin 40px 60px */
+  /* ==== border */
+  --border-style:  solid 0.1px #dfdfdf;/* Kiểu đường viền */
+  }

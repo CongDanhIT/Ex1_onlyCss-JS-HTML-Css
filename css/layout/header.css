@@ -1,0 +1,67 @@
+.logo {
+    width: 120px;
+    height: auto;
+    
+    
+}
+/* header */
+#header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px;
+    background-color: var(--color-main);
+    box-shadow: var(--shadow-header);
+    z-index: 999;
+    min-height: 120px;
+}
+#navbar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+#navbar li {
+    display: inline-block;
+    padding: 0 32px;
+    list-style: none;
+}
+#navbar li a  {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: calc(24rem/16);
+    font-weight: 700;
+    transition: color var(--transition-fast);
+    position: relative;
+
+}
+#navbar li a:hover,
+#navbar li a.active {
+    color: var(--color-secondary);
+    
+}
+#navbar li a.active::after,
+#navbar li a:hover::after  /* Thêm pseudo-element cho hiệu ứng hover */
+ {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    background-color: var(--color-secondary);
+    bottom: -5px;
+    left: 50%; /* Đặt phần tử bắt đầu từ giữa */
+    transform: translateX(-50%); /* Căn chỉnh chính giữa theo chiều ngang */
+}
+.mobile {
+    display: none;
+}
+#close-menu {
+    display: none;
+}

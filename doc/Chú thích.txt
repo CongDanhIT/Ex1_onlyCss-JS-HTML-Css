@@ -1,0 +1,15 @@
+🦸‍♂️ Hero section là gì?
+Hero section là phần đầu trang web, thường là phần to nhất và nổi bật nhất mà người dùng thấy đầu tiên khi vừa truy cập trang.
+
+Nó giống như "gương mặt đại diện" của trang đó.
+
+📸 Ví dụ hero section thường gồm:
+Hình ảnh nền lớn hoặc video
+
+Tiêu đề chính (headline) rất to và rõ
+
+Mô tả ngắn (subtitle) hoặc tagline
+
+Nút kêu gọi hành động (CTA) như "Mua ngay", "Xem thêm", "Đăng ký",...
+
+Đôi khi có: ảnh sản phẩm, form đăng ký, hoặc icon

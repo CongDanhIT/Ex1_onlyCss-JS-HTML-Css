@@ -1,0 +1,68 @@
+#page-header-about {
+    background-image: url(/img/BannerForAbout.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--color-white);
+    text-shadow: var(--shadow-text-black);
+    filter: brightness(90%);
+}
+#about-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 40px 80px;
+}
+.head-img {
+    width: 30%;
+}
+.head-img img {
+    width: 100%;
+
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-lg);
+}
+.head-content{
+    width: 60%;
+}
+.head-content marquee{
+    font-size: calc(20rem/16);
+    color: var(--color-white);
+    text-shadow: var(--shadow-text-black);
+    font-weight: 700;
+    background-color: #ccc;
+    margin-top: 20px;
+}
+.head-content p {
+    margin: 20px 0;
+}
+#about-app {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#about-app .video-box  {
+    width: 80%;
+    margin-top: 30px;
+    background-color: #535052;
+    padding: 40px 80px;
+    border-radius: var(--radius-md);
+    z-index: 1;
+}
+#about-app .video-box video {
+    width: 30%;
+    height: 100%;
+    border-radius: var(--radius-md);
+    z-index: 2;
+}
+
