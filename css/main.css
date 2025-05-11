@@ -186,7 +186,33 @@
     #about-app .video-box {
         width: 100%;
     }
+    /* contact page */
+    #form-details form {
+        width: 55%;
+    }
+    .people {
+    padding: 0px 0 0px 40px;
+    width: 45%;
+    }
+    #form-details form h2 {
+        font-size: calc(40rem/16);
+    }
+    .info-person {
+        width: 60%;
+    }
+    .info-person p {
+        width: 100%;
+                word-wrap: break-word; /* Thêm này để text email wrap đúng */
+    }
+    .details_btn-submit {
+    width: 85%;
+    
+    }
 }
+
+
+
+
 
 
 @media (max-width: 477px) {
@@ -245,7 +271,7 @@
     width: 100%;
     text-align: center;
     padding: 40px 40px;
-}
+    }
     .card {
         min-width: 100%;
     }
@@ -330,24 +356,48 @@
     }
     #blog {
     padding: 100px 20px 50px 20px;
+    }
+    /* about page */
+    #about-head {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    .head-img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .head-content {
+        width: 100%;
+        text-align: justify;
+    }
+    #about-app .video-box {
+        padding: 10px 20px;
+    }
+    /* contact page */
+    #form-details {
+        flex-direction: column;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #form-details form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .details_btn-submit {
+        width: 100%;
+        
+    }
+    .people {
+        padding: 0;
+        width: 100%;
+    }
+    #contact-details {
+        flex-direction: column;
+    }
+    #contact-details .contact-info {
+        width: 100%;
+    }
+    #contact-details .box-map {
+        width: 100%;
+    }
 }
-/* about page */
-#about-head {
-    flex-direction: column;
-    padding: 40px 20px;
-}
-.head-img {
-    width: 100%;
-    margin-bottom: 20px;
-}
-.head-content {
-    width: 100%;
-    text-align: justify;
-}
-#about-app .video-box {
-    padding: 10px 20px;
-}
-}
-
-
-

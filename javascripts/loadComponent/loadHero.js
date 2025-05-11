@@ -64,4 +64,25 @@ export default function loadHero() {
             }
         }, 200);
     }
+    else if (currentPage === "contact.html") {
+        setTimeout(() => {
+            const heroSection = document.querySelector("#hero");
+            if (heroSection) {
+                heroSection.id = "page-header-contact"; // Thay đổi id thành page-header
+                const elements = heroSection.querySelectorAll("h4, h1,button");
+                elements.forEach(el => el.remove());
+                
+                // Thêm nội dung mới cho h2 và p
+                const h2 = heroSection.querySelector("h2");
+                const p = heroSection.querySelector("p");
+
+                if (h2) {
+                    h2.textContent = "#Let's talk"; // Thêm nội dung cho h2
+                }
+                if (p) {
+                    p.textContent = "Leave a message, we'll get back to you soon."; // Thêm nội dung cho p
+                }
+            }
+        }, 200);
+    }
 }

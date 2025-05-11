@@ -1,17 +1,22 @@
 /* shop pages */
 #page-header {
-    background-image: url('../../img/Heroshop.jpg');
+    background-image: url('../../img/shop/page-head_forShop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: top 65% center;
     height: 40vh;
-    filter: brightness(75%);
+    filter: brightness(100%);
+
 }
 #page-header h2,#page-header p {
     color: var(--color-main);
     text-align: center;
     
-    text-shadow: var( --shadow-text-white);
+    text-shadow: var(--shadow-header);
 
+}
+#page-header p {
+    color: var(--color-white);
 }
 #page-header h2 {
     padding-top: 15vh;
