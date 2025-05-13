@@ -85,4 +85,25 @@ export default function loadHero() {
             }
         }, 200);
     }
+    else if (currentPage === "cart.html") {
+        setTimeout(() => {
+            const heroSection = document.querySelector("#hero");
+            if (heroSection) {
+                heroSection.id = "page-header-cart"; // Thay đổi id thành page-header
+                const elements = heroSection.querySelectorAll("h4, h1,button");
+                elements.forEach(el => el.remove());
+                
+                // Thêm nội dung mới cho h2 và p
+                const h2 = heroSection.querySelector("h2");
+                const p = heroSection.querySelector("p");
+
+                if (h2) {
+                    h2.textContent = "#Your Cart"; // Thêm nội dung cho h2
+                }
+                if (p) {
+                    p.textContent = "Lorem sham rema kas nena mehn loner minnl"; // Thêm nội dung cho p
+                }
+            }
+        }, 200);
+    }
 }

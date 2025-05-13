@@ -17,3 +17,27 @@ button {
  margin-top: 24px;
  margin-left: 28px;
 }
+.normal-button {
+    margin-top: 16px;
+    background-image: none;
+    border: var(--border-style);
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    font-size: calc(16rem / 16);
+    flex-basis: 200px;
+    min-width:  150px;
+}
+.normal-button:hover {
+    background-color: var(--color-main);
+    color: var(--color-bg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-fast);
+}
+.normal-button:active {
+    background-color: var(--color-main);
+    color: var(--color-bg);
+    box-shadow: var(--shadow-inset);
+    transition: var(--transition-fast);
+}

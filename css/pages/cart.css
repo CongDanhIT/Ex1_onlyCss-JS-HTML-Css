@@ -1,0 +1,132 @@
+#page-header-cart {
+    background-image: url(../../img/cart/page-head_forCart.jpg);
+    background-size: cover;
+    background-position: top 30% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--color-white);
+    text-shadow: var(--shadow-text-black);
+    filter: brightness(90%);
+}
+#cart {
+    padding: 40px 40px;
+    overflow-x: auto;
+}
+#cart table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse; /* Collapse borders xóa bộ viền trùng */
+    table-layout: fixed; /* Đặt chiều rộng cố định cho bảng */
+     /* Ngăn ngắt dòng trong ô */
+}
+#cart table thead {
+    border-bottom: 1px solid var(--color-caption);
+    margin-bottom: 20px;
+}
+#cart table thead td {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    font-size: calc(18rem/16);
+}
+#cart table tbody tr {
+    padding-top: 20px;
+}
+
+#cart table tbody td {
+    padding-top: 20px;
+    font-size: calc(14rem/16);
+    font-weight: 600;
+    
+}
+
+.product-image {
+     width: 100%;
+    max-width: 100px;       /* Tùy chọn: giới hạn chiều rộng tối đa */
+    aspect-ratio: 3 / 4;    /* Đảm bảo hình vuông */
+    
+}
+#cart table td:nth-child(1) {
+    width: 150px;
+    text-align: center;
+}
+#cart table td:nth-child(2) {
+   
+    text-align: center;
+    width: 200px; /* Use width instead of min-width */
+}
+
+#cart table td:nth-child(3) {
+    
+    text-align: center;
+    
+    width: 300px;
+}
+#cart table td:nth-child(4),#cart table td:nth-child(5) {
+    text-align: center;
+    width: 100px;
+}
+#cart table td:nth-child(6) {
+    text-align: center;
+    width: 100px;
+}
+#cart table td input {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-caption);
+    padding: 5px;
+}
+
+#cart-add {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 40px;
+}
+#cart-add .coupon{
+ width: 50%;
+ margin-bottom: 30px;
+ padding: 40px;
+}
+#cart-add .coupon h3 {
+    padding-bottom: 15px;
+}
+#cart-add .coupon input {
+    
+    padding: 12px 16px;
+    outline: none;
+    box-shadow: var(--shadow-inset);
+    border: var(--color-caption) 1px solid;
+    width: 60%;
+    
+}
+#subtotal {
+    width: 45%;
+    border: var(--color-caption) 1px solid;
+    padding: 30px;
+    box-shadow: var(--shadow-sm);
+}
+#subtotal h3 {
+    padding-bottom: 15px;
+}
+#subtotal table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#subtotal table td {
+    width: 50%;
+    border: var(--color-caption) 1px solid;
+    box-shadow: var(--shadow-inset);
+    padding: 10px;
+    font-size: calc(14rem/16);
+}
+

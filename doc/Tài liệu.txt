@@ -250,8 +250,11 @@ hoặc cấu hình đơn giản cho Node.js + EJS, mình làm liền luôn nha �
 ***************************************************************************************************************************************************************
 Pharse 4: chú ý luôn set kích thước % cho các item của khối flex để có thể thiết kế đáp ứng toàn diện
 nó sẽ có giãn theo khung hình hoặc bạn set kích thước cố định và cho nó wrap để tạo trải nhiệm về đáp ứng
+
 ***********************************************************************************************************************************************************************
- word-wrap: break-word; (hoặc overflow-wrap: break-word; trong chuẩn mới) được dùng để đảm bảo rằng văn bản dài như địa chỉ email hoặc đường link sẽ tự động xuống dòng khi nó vượt quá chiều rộng của phần tử chứa nó.
+
+
+Pharse 5: word-wrap: break-word; (hoặc overflow-wrap: break-word; trong chuẩn mới) được dùng để đảm bảo rằng văn bản dài như địa chỉ email hoặc đường link sẽ tự động xuống dòng khi nó vượt quá chiều rộng của phần tử chứa nó.
 
 Nếu bạn không dùng thuộc tính này, một chuỗi không có dấu cách (ví dụ: email dài như thisisaverylongemailaddress@exampledomain.com) có thể tràn ra ngoài phần tử hoặc làm vỡ giao diện.
 
@@ -275,3 +278,10 @@ Edit
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
+
+
+*********************************************************************************************************************************************************8
+
+
+Pharse 6
+white-space: nowrap; /* Ngăn ngắt dòng trong ô */
